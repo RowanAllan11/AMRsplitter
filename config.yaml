@@ -1,5 +1,9 @@
+# Instructions:
+# Change or add read names in the samples section below.
+
+# Test data read name is specified.
 samples:
-    - 
+    - SRR
     
 params:
   trimmomatic:
