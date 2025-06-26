@@ -1,0 +1,10 @@
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - python=3.12.3
+  - pip              
+  - centrifuge-core=1.0.4.1
+  - pip:
+      - gplas         #pip package installed inside conda env
+
