@@ -10,7 +10,7 @@ The steps are:
 - AMR gene totals and lists are collected in an overall summary "csv" file for each read.
 
 # Example Folder
-https://github.com/
+https://github.com/RowanAllan11/Plasmid_Segregator/blob/main/example_folder.txt
 
 ## Relevant folders for output:
 
