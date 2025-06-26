@@ -1,6 +1,4 @@
-# Rule .smk for gplasCC. Involves launching the gplasCC conda environment and running the program which outputs many .fasta files. The run can also fail if there are no plasmid contigs predicted and added to a bin.
-
-#------------------------------------------------------------------------------------
+# Rule .smk for gplasCC. Involves launching the gplasCC conda environment and running the program which can output multiple .fasta files.
 
 rule gplasCC:
     input:
