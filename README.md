@@ -10,7 +10,10 @@ The steps include:
 - Collecting AMR gene totals and lists in an overall summary "csv" file for each read.
 
 # Quick-start guide
-A complete list of the short-reads used in our analysis is available [here](https://..).
+The list of short-read datasets used in our analysis is available in two separate files:
+
+- [SGI sample list](https://github.com/RowanAllan11/Plasmid_Segregator/blob/main/SGI_Accessions.xlsx)
+- [Integrated plasmid sample list](https://github.com/RowanAllan11/Plasmid_Segregator/blob/main/Integrated_Plasmid_Accessions.xlsx)
 
 An example paired-end short-read sample is provided in the data/ directory and referenced in the config.yaml file. These files follow the naming format {sample}_1.fastq.gz and {sample}_2.fastq.gz, where {sample} is typically the run ID. This example can be used to test the workflow.
 
@@ -40,7 +43,5 @@ https://github.com/RowanAllan11/Plasmid_Segregator/blob/main/example_folder.txt
 # Data used for pipeline testing:
 In this project, we benchmarked 31 Salmonella enterica samples which contained integrated plasmids and SGIs contributing to chromosomal resistance.
 
-The full list of these samples including their "CP" accession and run accession are included here.
-These genomes were collected from the bioproject "" which is available on ENA and were collected from this paper:
-
+These genomes were sourced from the bioproject PRJNA292661 and were annotated by:
 Li, Cong et al. “Long-Read Sequencing Reveals Evolution and Acquisition of Antimicrobial Resistance and Virulence Genes in Salmonella enterica.” Frontiers in microbiology vol. 12 777817. 19 Nov. 2021, doi:10.3389/fmicb.2021.777817
