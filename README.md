@@ -23,7 +23,7 @@ First, the different conda environments can be installed using the following com
 
     snakemake --use-conda --conda-create-envs-only
 
-Then, the workflow can be used with the default confi file and 15 threads:
+Then, the workflow can be used with the default config file and 15 threads:
 
     snakemake --use-conda --cores 15
 
