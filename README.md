@@ -10,7 +10,7 @@ The steps include:
 - Collecting AMR gene totals and lists in an overall summary "csv" file for each read.
 
 # Quick-start guide
-A complete list of the short-read datasets used in our analysis is available [here](https://..).
+A complete list of the short-reads used in our analysis is available [here](https://..).
 
 An example paired-end short-read sample is provided in the data/ directory and referenced in the config.yaml file. These files follow the naming format {sample}_1.fastq.gz and {sample}_2.fastq.gz, where {sample} is typically the run ID. This example can be used to test the workflow.
 
