@@ -1,5 +1,5 @@
 # About:
-I built this snakemake pipeline to benchmark the plasmid contig predictor tool GplasCC and assess its AMR gene localisation capabilities on short read data.
+We built this snakemake pipeline to benchmark the plasmid contig predictor tool GplasCC and assess its AMR gene localisation capabilities on short read data.
 
 The steps include:
 - Quality checking the reads using "fastQC".
@@ -23,4 +23,7 @@ https://github.com/RowanAllan11/Plasmid_Segregator/blob/main/example_folder.txt
 # Further Reading:
 
 # Data used for pipeline testing:
+In this project, we benchmarked 31 Salmonella enterica samples which contained integrated plasmids and SGIs contributing to chromosomal resistance.
+The full list of these samples including their "CP" accession and run accession are included here.
+These genomes were collected from the bioproject "" which is available on ENA and were collected from this paper:
 Li, Cong et al. “Long-Read Sequencing Reveals Evolution and Acquisition of Antimicrobial Resistance and Virulence Genes in Salmonella enterica.” Frontiers in microbiology vol. 12 777817. 19 Nov. 2021, doi:10.3389/fmicb.2021.777817
