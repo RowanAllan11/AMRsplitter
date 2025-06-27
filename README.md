@@ -16,6 +16,14 @@ An example paired-end short-read sample is provided in the data/ directory and r
 
 To run the workflow on additional samples, download the paired-end reads into the data/ directory and add the sample name without the _1 or _2 suffix to the config.yaml file.
 
+First, the different conda environments can be installed using the following command:
+
+    snakemake --use-conda --conda-create-envs-only
+
+Then, the workflow can be used with the default confi file and 15 threads:
+
+    snakemake --use-conda --cores 15
+
 # Example Folder
 https://github.com/RowanAllan11/Plasmid_Segregator/blob/main/example_folder.txt
 
