@@ -1,9 +1,10 @@
 # Ignore sample results and read data
 results/
-Data/
+resources/
 db/
 .snakemake/
 .Rhistory
+.DS_Store
 
 # Ignore Conda environments if stored locally
 .env/

@@ -7,6 +7,8 @@ rule chromosome_fasta:
     output:
         ContigIDs = temp("results/{sample}/gplasCC/plasmid_ids.txt"),
         ChromFasta = "results/{sample}/gplasCC/chrom.fasta"
+    conda:
+        "../envs/Main.yaml"
     shell:
         """ if [ ! -s {input.PlasFasta} ]; then
                 echo "No plasmid bins found for {wildcards.sample}"

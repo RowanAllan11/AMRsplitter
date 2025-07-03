@@ -10,16 +10,15 @@ The steps include:
 - Collecting AMR gene totals and lists in an overall summary "csv" file for each read.
 
 # Quick-start guide
-The list of short-read datasets used in our analysis is available in two separate files:
+The list of short-reads used in our analysis is available here:
 
-- [SGI sample list](https://github.com/RowanAllan11/Plasmid_Segregator/blob/main/SGI_Accessions.xlsx)
-- [Integrated plasmid sample list](https://github.com/RowanAllan11/Plasmid_Segregator/blob/main/Integrated_Plasmid_Accessions.xlsx)
+- 
 
 An example paired-end short-read sample is provided in the data/ directory and referenced in the config.yaml file. These files follow the naming format {sample}_1.fastq.gz and {sample}_2.fastq.gz, where {sample} is typically the run ID. This example can be used to test the workflow.
 
 To run the workflow on additional samples, download the paired-end reads into the data/ directory and add the sample name without the _1 or _2 suffix to the config.yaml file.
 
-First, the different conda environments can be installed using the following command:
+First, the conda environments can be installed using the following command:
 
     snakemake --use-conda --conda-create-envs-only
 

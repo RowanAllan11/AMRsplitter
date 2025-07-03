@@ -6,6 +6,8 @@ rule amr_summary:
         plas = "results/{sample}/amrfinder/plasmid/{sample}.tsv"
     output:
         combined = "results/{sample}/amr_summary.csv"
+    conda:
+        "../envs/Main.yaml"
     shell:
         """python scripts/AMRsummary.py {input.chr} {input.plas} {output.combined}"""
 

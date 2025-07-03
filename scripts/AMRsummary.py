@@ -16,8 +16,8 @@ if __name__ == "__main__":
     # Parse chromosome AMRFinder .tsv
     chr_df = pd.read_csv(amrfinderchr, sep="\t", dtype=str, comment="#")
     for _, row in chr_df.iterrows():
-        gene_type = row["Element subtype"]
-        gene_name = row["Gene symbol"]
+        gene_type = row["Type"]
+        gene_name = row["Element symbol"]
         gene_scope = row["Scope"]
         if gene_type == "AMR" and gene_scope == "core":
             chr_amr_genes.append(gene_name)
@@ -25,8 +25,8 @@ if __name__ == "__main__":
     # Parse plasmid AMRFinder .tsv
     plas_df = pd.read_csv(amrfinderplas, sep="\t", dtype=str, comment="#")
     for _, row in plas_df.iterrows():
-        gene_type = row["Element subtype"]
-        gene_name = row["Gene symbol"]
+        gene_type = row["Type"]
+        gene_name = row["Element symbol"]
         gene_scope = row["Scope"]
         if gene_type == "AMR" and gene_scope == "core":
             plas_amr_genes.append(gene_name)

@@ -3,7 +3,7 @@
 
 # Test data read name is specified.
 samples:
-    - SRR
+    - SRR9984301
     
 params:
   trimmomatic:

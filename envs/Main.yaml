@@ -1,0 +1,12 @@
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.12.11
+  - seqkit
+  - fastqc
+  - trimmomatic
+  - unicycler
+  - ncbi-amrfinderplus
+  - pandas
