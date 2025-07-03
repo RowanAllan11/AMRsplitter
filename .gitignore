@@ -2,6 +2,7 @@
 results/
 resources/
 db/
+data/
 .snakemake/
 .Rhistory
 .DS_Store
