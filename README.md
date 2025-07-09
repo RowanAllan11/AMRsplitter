@@ -9,15 +9,7 @@ The steps include:
 - Calling AMR genes on both the chromosome and plasmid "fasta" files using "AMRFinderPlus".
 - Collecting AMR gene totals and lists in an overall summary "csv" file for each read.
 
-# Quick-start guide
-The list of short-reads used in our analysis is available here:
-
-- 
-
-An example paired-end short-read sample is provided in the data/ directory and referenced in the config.yaml file. These files follow the naming format {sample}_1.fastq.gz and {sample}_2.fastq.gz, where {sample} is typically the run ID. This example can be used to test the workflow.
-
-To run the workflow on additional samples, download the paired-end reads into the data/ directory and add the sample name without the _1 or _2 suffix to the config.yaml file.
-
+## Usage
 First, the conda environments can be installed using the following command:
 
     snakemake --use-conda --conda-create-envs-only
@@ -26,18 +18,27 @@ Then, the workflow can be used with the default config file and 15 threads:
 
     snakemake --use-conda --cores 15
 
+## Input/Output
+
+##Input##:
+
+* Paired-end FASTQ files stored in the data/directory. These files follow the naming format {sample}_1.fastq.gz and {sample}_2.fastq.gz.
+* Sample name (without the _1 or _2 suffix) in the config.yaml file.
+
+##Output##:
+
+* The genome of the sample (with the plasmid sequences) in a FASTA file format in 'results/{sample}/unicycler/assembly.fasta'
+* The predicted chromosome contigs in a FASTA file format in 'results/{sample}/gplasCC/chrom.fasta'
+* The predicted plasmid contigs in a FASTA file format in 'results/{sample}/gplasCC/combined.fasta'
+* A table in 'results/combined_amr_summary.csv' summarising the metadata on the generated FASTA files:
+      - Total number of AMR genes
+      - List of chromosome AMR genes
+      - List of plasmid AMR genes
+
 # Example Folder
 https://github.com/RowanAllan11/Plasmid_Segregator/blob/main/example_folder.txt
 
-## Relevant folders for output:
-
-- results/{sample}/gplasCC/chrom.fasta : chromosome FASTA file for further visualisation or annotation.
-- results/{sample}/gplasCC/combined.fasta : combined plasmid FASTA for further visualisation or annotation.
-- results/combined_amr_summary : AMR gene totals and lists for each sample divided into chromosome or plasmid columns.
-
 # Thanks:
-
-# Further Reading:
 
 # Data used for pipeline testing:
 In this project, we benchmarked 31 Salmonella enterica samples which contained integrated plasmids and SGIs contributing to chromosomal resistance.
