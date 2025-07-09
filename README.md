@@ -2,7 +2,7 @@
 We built this snakemake pipeline to benchmark the plasmid contig predictor tool GplasCC and assess its AMR gene localisation capabilities on short-read data.
 
 The steps include:
-- Quality checking the reads using fastQC`.
+- Quality checking the reads using `fastQC`.
 - Trimming reads for adapters and low quality base pairs using `trimmomatic`.
 - Assembling the reads using `unicycler`.
 - Binning plasmid-predicted contigs using `gplasCC` which are removed from the unicycler assembly `fasta` file to create a chromosome only `fasta` file.
