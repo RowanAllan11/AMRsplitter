@@ -20,20 +20,20 @@ Then, the workflow can be used with the default config file and 15 threads:
 
 ## Input/Output
 
-##Input##:
+**Input**:
 
 * Paired-end FASTQ files stored in the data/directory. These files follow the naming format {sample}_1.fastq.gz and {sample}_2.fastq.gz.
 * Sample name (without the _1 or _2 suffix) in the config.yaml file.
 
-##Output##:
+**Output**:
 
 * The genome of the sample (with the plasmid sequences) in a FASTA file format in 'results/{sample}/unicycler/assembly.fasta'
 * The predicted chromosome contigs in a FASTA file format in 'results/{sample}/gplasCC/chrom.fasta'
 * The predicted plasmid contigs in a FASTA file format in 'results/{sample}/gplasCC/combined.fasta'
 * A table in 'results/combined_amr_summary.csv' summarising the metadata on the generated FASTA files:
-      - Total number of AMR genes
-      - List of chromosome AMR genes
-      - List of plasmid AMR genes
+    - Total number of AMR genes
+    - List of chromosome AMR genes
+    - List of plasmid AMR genes
 
 # Example Folder
 https://github.com/RowanAllan11/Plasmid_Segregator/blob/main/example_folder.txt
