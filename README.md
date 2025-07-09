@@ -27,10 +27,10 @@ Then, the workflow can be used with the default config file and 15 threads:
 
 **Output**:
 
-* The genome of the sample (with the plasmid sequences) in a FASTA file format in 'results/{sample}/unicycler/assembly.fasta'
-* The predicted chromosome contigs in a FASTA file format in 'results/{sample}/gplasCC/chrom.fasta'
-* The predicted plasmid contigs in a FASTA file format in 'results/{sample}/gplasCC/combined.fasta'
-* A table in 'results/combined_amr_summary.csv' summarising the metadata on the generated FASTA files:
+* The genome of the sample (with the plasmid sequences) in a FASTA file format in `results/{sample}/unicycler/assembly.fasta`
+* The predicted chromosome contigs in a FASTA file format in `results/{sample}/gplasCC/chrom.fasta`
+* The predicted plasmid contigs in a FASTA file format in `results/{sample}/gplasCC/combined.fasta`
+* A table in `results/combined_amr_summary.csv` summarising the metadata on the generated FASTA files:
     - Total number of AMR genes
     - List of chromosome AMR genes
     - List of plasmid AMR genes
