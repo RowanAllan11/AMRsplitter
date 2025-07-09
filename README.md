@@ -2,12 +2,12 @@
 We built this snakemake pipeline to benchmark the plasmid contig predictor tool GplasCC and assess its AMR gene localisation capabilities on short-read data.
 
 The steps include:
-- Quality checking the reads using "fastQC".
-- Trimming reads for adapters and low quality base pairs using "trimmomatic".
-- Assembling the reads using "unicycler".
-- Binning plasmid-predicted contigs using "gplasCC" which are removed from the unicycler assembly "fasta" file to create a chromosome only "fasta" file.
-- Calling AMR genes on both the chromosome and plasmid "fasta" files using "AMRFinderPlus".
-- Collecting AMR gene totals and lists in an overall summary "csv" file for each read.
+- Quality checking the reads using fastQC`.
+- Trimming reads for adapters and low quality base pairs using `trimmomatic`.
+- Assembling the reads using `unicycler`.
+- Binning plasmid-predicted contigs using `gplasCC` which are removed from the unicycler assembly `fasta` file to create a chromosome only `fasta` file.
+- Calling AMR genes on both the chromosome and plasmid `fasta` files using `AMRFinderPlus`.
+- Collecting AMR gene totals and lists in an overall summary `csv` file for each read.
 
 ## Usage
 First, the conda environments can be installed using the following command:
@@ -22,7 +22,7 @@ Then, the workflow can be used with the default config file and 15 threads:
 
 **Input**:
 
-* Paired-end FASTQ files stored in the data/directory. These files follow the naming format {sample}_1.fastq.gz and {sample}_2.fastq.gz.
+* Paired-end FASTQ files stored in the data/directory. These files follow the naming format `{sample}_1.fastq.gz` and `{sample}_2.fastq.gz`.
 * Sample name (without the _1 or _2 suffix) in the config.yaml file.
 
 **Output**:
