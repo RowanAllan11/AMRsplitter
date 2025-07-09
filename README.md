@@ -35,13 +35,17 @@ Then, the workflow can be used with the default config file and 15 threads:
     - List of chromosome AMR genes
     - List of plasmid AMR genes
 
-# Example Folder
+## Example Folder
 https://github.com/RowanAllan11/Plasmid_Segregator/blob/main/example_folder.txt
 
-# Thanks:
-
 # Data used for pipeline testing:
-In this project, we benchmarked 31 Salmonella enterica samples which contained integrated plasmids and SGIs contributing to chromosomal resistance.
+**In this project, we benchmarked 31 Salmonella enterica samples which contained integrated plasmids and SGIs contributing to chromosomal resistance.**
 
-These genomes were sourced from the bioproject PRJNA292661 and were annotated by:
+These genomes were sourced from the **BioProject PRJNA292661** and were annotated by:
+
 Li, Cong et al. “Long-Read Sequencing Reveals Evolution and Acquisition of Antimicrobial Resistance and Virulence Genes in Salmonella enterica.” Frontiers in microbiology vol. 12 777817. 19 Nov. 2021, doi:10.3389/fmicb.2021.777817
+
+The full list of samples including their true AMR gene localisation is available [here](https://github.com/RowanAllan11/AMRsplitter/blob/main/accessions/Sample_Accessions.xlsx).
+
+## Script: 
+
