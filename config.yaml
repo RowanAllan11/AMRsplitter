@@ -3,9 +3,11 @@
 
 # Test data read name is specified.
 samples:
-    - SRR9984301
+    - SRR9210990
     
 params:
   trimmomatic:
     adapters: "TruSeq3-PE.fa"
     options: "ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 MINLEN:36"
+  unicycler:
+    threads: 15    # Adjust based on computers CPU core count

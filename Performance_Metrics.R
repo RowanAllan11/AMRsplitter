@@ -10,7 +10,7 @@ library(stringr)
 library(writexl)
 
 # Load the output from the snakemake pipeline.
-sr <- read_excel("results/combined_amr_summary.csv")
+sr <- read.csv("results/combined_amr_summary.csv")
 
 # Input name of file containing list of AMR genes in "ground-truth" location corresponding to samples run in the snakemake pipeline e.g. SGI_Accessions.xlsx.
 hybrid <- read_excel("accessions/Sample_Accessions.xlsx")

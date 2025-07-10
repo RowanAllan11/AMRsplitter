@@ -2,8 +2,8 @@
 
 rule fastqc:
     input:
-        Forward = "Data/{sample}_1.fastq.gz",
-        Reverse = "Data/{sample}_2.fastq.gz"
+        Forward = "data/{sample}_1.fastq.gz",
+        Reverse = "data/{sample}_2.fastq.gz"
     output:
         ForwardQC = "results/{sample}/fastqc/{sample}_1_fastqc.html",
         ReverseQC = "results/{sample}/fastqc/{sample}_2_fastqc.html"
@@ -17,8 +17,8 @@ rule fastqc:
 
 rule trimmomatic:
     input:
-        Forward = "Data/{sample}_1.fastq.gz",
-        Reverse = "Data/{sample}_2.fastq.gz"
+        Forward = "data/{sample}_1.fastq.gz",
+        Reverse = "data/{sample}_2.fastq.gz"
     output:
         Forward_paired = temp("results/{sample}/trimmomatic/{sample}_1P.fastq.gz"),
         Forward_unpaired = temp("results/{sample}/trimmomatic/{sample}_1U.fastq.gz"),
@@ -45,13 +45,15 @@ rule unicycler:
     output:
         Fasta = "results/{sample}/unicycler/assembly.fasta",
         GFA = "results/{sample}/unicycler/assembly.gfa"
-    threads: 15
+    params:
+        threads = config["params"]["unicycler"]["threads"]
+    threads: config["params"]["unicycler"]["threads"]
     conda:
         "../envs/Main.yaml"
     shell:
         """unicycler -1 {input.Forward_Paired} \
                   -2 {input.Reverse_Paired} \
                   -o results/{wildcards.sample}/unicycler \
-                  --threads {threads}"""
+                  --threads {params.threads}"""
 
 

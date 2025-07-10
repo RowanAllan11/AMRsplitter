@@ -19,7 +19,8 @@ if __name__ == "__main__":
         gene_type = row["Type"]
         gene_name = row["Element symbol"]
         gene_scope = row["Scope"]
-        if gene_type == "AMR" and gene_scope == "core":
+        gene_subtype = row["Subtype"]
+        if gene_type == "AMR" and gene_scope == "core" and gene_subtype == "AMR":
             chr_amr_genes.append(gene_name)
 
     # Parse plasmid AMRFinder .tsv
@@ -28,7 +29,8 @@ if __name__ == "__main__":
         gene_type = row["Type"]
         gene_name = row["Element symbol"]
         gene_scope = row["Scope"]
-        if gene_type == "AMR" and gene_scope == "core":
+        gene_subtype = row["Subtype"]
+        if gene_type == "AMR" and gene_scope == "core" and gene_subtype == "AMR":
             plas_amr_genes.append(gene_name)
 
     # Generate summary
@@ -44,7 +46,7 @@ if __name__ == "__main__":
         "Total_Chr": total_chr,
         "Total_Plas": total_plas,
         "Chr_AMR_genes": " ".join(chr_amr_genes),
-        "Plasmid_AMR_genes": " ".join(plas_amr_genes)
+        "Plas_AMR_genes": " ".join(plas_amr_genes)
     }])
 
     summary_df.to_csv(summary_output, index=False)
