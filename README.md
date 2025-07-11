@@ -48,5 +48,7 @@ Li, Cong et al. “Long-Read Sequencing Reveals Evolution and Acquisition of Ant
 The full list of samples including their true AMR gene localisation is available [here](https://github.com/RowanAllan11/AMRsplitter/blob/main/accessions/Sample_Accessions.xlsx).
 
 ## Script: Performance_Metrics.R
+This script evaluates the performance of short-read AMR gene localisation which is outputted by AMRsplitter in `combined_amr_summary.csv` by comparing it against the "ground truth" data in `accessions/Sample_Accessions.xlsx`. It computes gene-level classification metrics — True Positives (TP), False Positives (FP), False Negatives (FN) — and calculates Precision, Recall and F1-score for both plasmid and chromosome AMR genes on a per-sample basis.
 
-
+## Graphs
+Plots were generated using code adapted from https://gitlab.com/jpaganini/ecoli-binary-classifier, the script was modified to accommodate output from the `Performance_Metrics.R` script.
