@@ -35,9 +35,6 @@ Then, the workflow can be used with the default config file and 15 threads:
     - List of chromosome AMR genes
     - List of plasmid AMR genes
 
-## Example Folder
-https://github.com/RowanAllan11/Plasmid_Segregator/blob/main/example_folder.txt
-
 # Data used for pipeline testing:
 **In this project, we benchmarked 31 Salmonella enterica samples which contained integrated plasmids and SGIs contributing to chromosomal resistance.**
 
